@@ -20,3 +20,7 @@ weight = st.text_input("Enter some text")
 
 choice = st.number_input(label = "Adjust water", step = 1)
 st.image("cup.png")
+
+#BACKGROUND COLOR
+[theme]
+backgroundColor = “#CBC3E3”
