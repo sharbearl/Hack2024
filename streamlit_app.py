@@ -19,7 +19,7 @@ with col4.expander("Exercise Log"):
 water_expander = col5.expander("Water log")
 print("TEST PRINT")
 if (water_expander):
-    choice = st.number_input(label = "Adjust water", min_value = 0, step = 1, on_change=update)
+    choice = st.number_input(label = "Adjust water", min_value = 0, step = 1)
     st.write("this is a test")
 
 def update():
