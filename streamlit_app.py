@@ -10,13 +10,16 @@ def update_progress(choice, water_bar):
 		water_bar.progress(water_progress/100, text="Water")
 	else:
 		water_bar.progress(100, text="Nice! You've drank the recommended amount of water!")
+		img = "happyanteater.png"
 
 
 if __name__ == "__main__":
 
 	col1, col2, col3, col4, col5 = st.columns(5)
-	
-	st.image("thirstyanteater.png")
+
+	water_text = "Water"
+	img = "thirstyanteater.png"
+	st.image(img)
 	water_bar = st.progress(0, text=water_text)
 	
 	with col1.expander("Home"):
