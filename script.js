@@ -4,6 +4,7 @@ let cups = 0;
 function increaseWater()
 {
  cups = cups + 1; 
+ updateText();
 }
 
 function toggleShow()
