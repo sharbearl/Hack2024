@@ -26,8 +26,13 @@ def update_prog_calorie(calorie, calorie_bar, type, mid):
 		percentage = calc_prog_calorie_cut(calorie)
 	else:
 		percentage = calc_prog_calorie(calorie)
-		
-	
+	if percentage < 100:
+		calorie_bar.progress(percentage/100, text = "Calorie")
+	else:
+		calorie_bar.progress(100, text = "Nice! You reached your daily recommended calorie count!")
+		img = "happyanteater.png"
+		mid.empty()
+		mid.image(img, width=300)
 if __name__ == "__main__":
 	col1, col2, col3, col4 = st.columns(4)
 	_left, mid, _right = st.columns(3)
@@ -58,7 +63,7 @@ if __name__ == "__main__":
 	
 	water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 	update_progress_water(water_val, water_bar, mid)
-	option = st.selectbox(label = "Food Calorie Tracking", options = ["Bulk", "Cut", "Neither"])
+	option = st.selectbox(label = "Food Calorie Tracking", options = ["Bulk", "Cut", "Neither"], placeholder = "Select an option below")
 	calorie_bar = st.progress(0, text = "Calorie Count")
 	if option == "Bulk":
 		calorie_bar.empty()
