@@ -1,2 +1,8 @@
 import streamlit as st
-st.text_input('Enter some text')
+
+# USER INPUT + VARIABLE STORING
+try:
+  double weight = st.text_input('Enter some text')
+except ValueError as e:
+  st.text(f”Error: {e}”)
+
