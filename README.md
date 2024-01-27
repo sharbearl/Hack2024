@@ -6,8 +6,9 @@ Website:
 - protein
 - vitamins
 - sleep
-Databases/Pulling data via API
+Databases
 - pulling all the recommended amounts stated above
+Pulling data via API
 - Pulling the daily weather + displaying on the background (rain, sunny, cloudy, clear sky)
 
 // Idea 1
