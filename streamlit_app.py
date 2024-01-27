@@ -4,8 +4,8 @@ def calculate_progress(val):
 	return (100/11)*val 
 
 def update_progress(choice, water_bar):
-	if calculate_progress(choice):
-		water_bar = st.progress(choice, text="Water")
+	if calculate_progress(choice) < 100:
+		water_bar = st.progress(calculate_progress(choice), text="Water")
 
 
 if __name__ == "__main__":
