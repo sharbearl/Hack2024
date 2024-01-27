@@ -28,11 +28,12 @@ if __name__ == "__main__":
 	with col1.expander("Home"):
 	  st.write("this is a test")
 	
-	switch = col2.button('Water'):
+	with col2:
+		switch = col2.button('Water'):
 	  # choice = st.number_input(label = "Adjust water", step = 1)
-	if switch:
-		water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-		update_progress(water_val, water_bar, mid)
+		if switch:
+			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
+			update_progress(water_val, water_bar, mid)
 	else:
 		water_bar.empty()
 	  
@@ -46,8 +47,8 @@ if __name__ == "__main__":
 	  
 	#water_expander = col5.expander("Water log")
 	
-	water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-	update_progress(water_val, water_bar, mid)
+	# water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
+	# update_progress(water_val, water_bar, mid)
 	st.selectbox(label = "Calorie", options = ["Bulk", "Cut", "Neither"])
 	
 	# USER INPUT + VARIABLE STORING
