@@ -7,7 +7,7 @@ def update():
 def update_progress():
   water_bar.progress(water_val + 1, text=water_text)
 
-int main():
+if __name__ == "__main__":
 
 col1, col2, col3, col4, col5 = st.columns(5)
 water_val = 0;
