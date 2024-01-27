@@ -1,16 +1,11 @@
 import streamlit as st
 
-def update():
-  water_val += 1
-  update_progress()
-
-def update_progress():
+def update_progress(water_val ,water_bar, water_text):
   water_bar.progress(water_val + 1, text=water_text)
 
 if __name__ == "__main__":
 
 	col1, col2, col3, col4, col5 = st.columns(5)
-	water_val = 0;
 	
 	water_text = "Water"
 	water_bar = st.progress(0, text=water_text)
@@ -32,7 +27,8 @@ if __name__ == "__main__":
 	  
 	water_expander = col5.expander("Water log")
 	if (water_expander):
-	    choice = st.number_input(label = "Adjust water", min_value = 0, step = 1, on_change = update)
+	    water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1, on_change = update)
+	    update_progress(choice, water_bar, water_text)
 	    st.write("this is a test")
 	
 	# USER INPUT + VARIABLE STORING
