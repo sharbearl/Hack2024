@@ -23,4 +23,4 @@ st.image("cup.png")
 
 #BACKGROUND COLOR
 [theme]
-backgroundColor = “#CBC3E3”
+backgroundColor = "#CBC3E3"
