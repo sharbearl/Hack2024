@@ -7,9 +7,9 @@ food = st.expander("Food Log")
 
 # USER INPUT + VARIABLE STORING
 weight = st.text_input("Enter some text")
-while (type(weight) != double or type(weight) != int)
-{
-  st.text("Invalid input")
-}
+# while (type(weight) != double or type(weight) != int)
+# {
+#  st.text("Invalid input")
+# }
 
 
