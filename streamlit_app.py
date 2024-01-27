@@ -53,7 +53,7 @@ if __name__ == "__main__":
 		if switch:
 			toggleflag(flag_water)
 			
-		if flag_press:
+		if flag_press == True:
 			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 			update_progress_water(water_val, water_bar, mid)
 		else:
