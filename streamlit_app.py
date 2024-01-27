@@ -27,14 +27,8 @@ def update_prog_calorie(calorie, calorie_bar, type, mid):
 	else:
 		percentage = calc_prog_calorie(calorie)
 		
-def toggleflag(flag):
-	if flag == True:
-		flag = False
-	else:
-		flag = True
 	
 if __name__ == "__main__":
-	flag_water = False
 	col1, col2, col3, col4 = st.columns(4)
 	_left, mid, _right = st.columns(3)
 	img = "thirstyanteater.png"
@@ -46,20 +40,9 @@ if __name__ == "__main__":
 	
 	with col1.expander("Home"):
 	  st.write("this is a test")
-	
-	with col2:
-		switch = st.button("Water Log")
-	  # choice = st.number_input(label = "Adjust water", step = 1)
-		if switch:
-			st.text("switch")
-			toggleflag(flag_water)
 
-		st.text(flag_water)
-		if flag_water == True:
-			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-			update_progress_water(water_val, water_bar, mid)
-		else:
-			water_bar.empty()
+	with col2.expander("Water Log"):
+	  st.write("this is a test")
 	  
 	with col3.expander("Food Log"):
 	  st.write("this is a test")
@@ -71,8 +54,8 @@ if __name__ == "__main__":
 	  
 	#water_expander = col5.expander("Water log")
 	
-	# water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-	# update_progress(water_val, water_bar, mid)
+	water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
+	update_progress(water_val, water_bar, mid)
 	option = st.selectbox(label = "Food Calorie Tracking", options = ["Bulk", "Cut", "Neither"])
 	calorie_bar = st.progress(0, text = "Calorie Count")
 	if option == "Bulk":
