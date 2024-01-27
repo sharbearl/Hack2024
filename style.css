@@ -28,6 +28,10 @@ button.tracking-buttons:hover{
   text-align: center;
 }
 
+#water_dropdown {
+   visibility: hidden;
+}
+
 #Avatar {
   margin-top: 100px;
 }
