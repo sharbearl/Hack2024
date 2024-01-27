@@ -14,10 +14,12 @@ function toggleShow()
   if (water_div.style.visibility === "visible")
   {
     water_div.style.visibility = "hidden";
+    console.log("Hiding");
   }
   else
   {
     water_div.style.visibility = "visible";
+    console.log("Showing");
   }
 }
 
