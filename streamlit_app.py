@@ -4,5 +4,5 @@ import streamlit as st
 try:
   weight = st.text_input("Enter some text")
 except ValueError as e:
-  st.text(f”Error: {e}”)
+  st.text(f"Error: {e}")
 
