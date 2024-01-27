@@ -17,6 +17,8 @@ if __name__ == "__main__":
 	col1, col2, col3, col4, col5 = st.columns(5)
 	
 	water_text = "Water"
+	st.image("thirstyanteater.png")
+	water_bar = st.progress(0, text=water_text)
 	
 	with col1.expander("Home"):
 	  st.write("this is a test")
@@ -45,6 +47,3 @@ if __name__ == "__main__":
 	with st.sidebar:
 		st.title("ABOUT")
 		st.text("BOO")
-	
-	st.image("thirstyanteater.png")
-	water_bar = st.progress(0, text=water_text)
