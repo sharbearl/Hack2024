@@ -49,8 +49,13 @@ if __name__ == "__main__":
 	
 	# water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 	# update_progress(water_val, water_bar, mid)
-	st.selectbox(label = "Calorie", options = ["Bulk", "Cut", "Neither"])
-	
+	option = st.selectbox(label = "Food Calorie Tracking", options = ["Bulk", "Cut", "Neither"])
+	if option == "Bulk":
+		st.progress(0, text = "Calorie Count")
+	elif option == "Cut":
+		st.progress(0, text = "Calorie Count")
+	else:
+		st.progress(0, text = "Calorie Count")
 	# USER INPUT + VARIABLE STORING
 	# weight = st.text_input("Enter some text")
 	form = st.form("Water")
