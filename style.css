@@ -23,8 +23,16 @@ button.tracking-buttons:hover{
 }
 
 #water_dropdown {
-   visibility: hidden;
-   height: 200px;
+  visibility: hidden;
+  margin: auto;
+  height: 200px;
+  width: 30%;
+}
+
+#water_record {
+  font-family: "Monaco", Monospace;
+  margin-top: 30px;
+  font-size: 50px;
 }
 
 #Water {
