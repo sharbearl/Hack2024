@@ -1,9 +1,5 @@
 import streamlit as st
 
-#BACKGROUND COLOR
-[theme]
-backgroundColor = "#CBC3E3"
-
 col1, col2, col3, col4 = st.columns(4)
 
 with col1.expander("Home"):
