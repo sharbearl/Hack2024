@@ -16,14 +16,14 @@ with col4.expander("Exercise Log"):
   st.write("this is a test")
 
 # water_checkbox = col5.checkbox("Water check")
+
+def update():
+  st.write("testing")
 water_expander = col5.expander("Water log")
 print("TEST PRINT")
 if (water_expander):
     choice = st.number_input(label = "Adjust water", min_value = 0, step = 1, on_change = update)
     st.write("this is a test")
-
-def update():
-  st.write("testing")
 
 # USER INPUT + VARIABLE STORING
 # weight = st.text_input("Enter some text")
