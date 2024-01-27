@@ -14,7 +14,7 @@ def update_progress(choice, water_bar):
 
 if __name__ == "__main__":
 
-	col1, col2, col3, col4, col5 = st.columns(5)
+	col1, col2, col3, col4 = st.columns(4)
 	_left, mid, _right = st.columns(3)
 	img = "thirstyanteater.png"
 	mid.image(img, width=300)		
@@ -37,10 +37,10 @@ if __name__ == "__main__":
 	
 	# water_checkbox = col5.checkbox("Water check")
 	  
-	water_expander = col5.expander("Water log")
-	if (water_expander):
-	    water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-	    update_progress(water_val, water_bar)
+	#water_expander = col5.expander("Water log")
+	
+	water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
+	update_progress(water_val, water_bar)
 	st.selectbox(label = "Calorie", options = ["Bulk", "Cut", "Neither"])
 	
 	# USER INPUT + VARIABLE STORING
