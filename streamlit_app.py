@@ -5,7 +5,6 @@ def calculate_progress(val):
 
 def update_progress(choice, water_bar):
 	water_progress = calculate_progress(choice)
-	st.text(water_progress)
 	if water_progress < 100:
 		water_bar.progress(water_progress/100, text="Water")
 	else:
@@ -19,7 +18,7 @@ if __name__ == "__main__":
 
 	water_text = "Water"
 	img = "thirstyanteater.png"
-	st.image(img)
+	st.image(img, width=640)
 	water_bar = st.progress(0, text=water_text)
 	
 	with col1.expander("Home"):
@@ -41,7 +40,6 @@ if __name__ == "__main__":
 	if (water_expander):
 	    water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 	    update_progress(water_val, water_bar)
-	    st.write("this is a test")
 	st.selectbox(label = "Calorie", options = ["Bulk", "Cut", "Neither"])
 	
 	# USER INPUT + VARIABLE STORING
