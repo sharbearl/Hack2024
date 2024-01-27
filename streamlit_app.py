@@ -1,13 +1,13 @@
 import streamlit as st
 
 def calculate_progress(val):
-	return (100/11)*val 
+	return (99/11)*val 
 
 def update_progress(choice, water_bar):
 	water_progress = calculate_progress(choice)
 	st.text(water_progress)
 	if water_progress < 100:
-		water_bar = st.progress(choice, text="Water")
+		water_bar = st.progress(water_progress/100, text="Water")
 
 
 if __name__ == "__main__":
