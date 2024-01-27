@@ -1,9 +1,9 @@
 import streamlit as st
 
-def calculate_progress(val->int):
+def calculate_progress(val):
 	return (100/11)*val 
 
-def update_progress(choice->int, water_bar):
+def update_progress(choice, water_bar):
 	if check_progress(choice):
 		water_bar = st.progress(choice, text="Water")
 
