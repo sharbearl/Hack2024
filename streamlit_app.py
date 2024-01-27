@@ -6,6 +6,7 @@ with col1.expander("Home"):
   st.write("this is a test")
 
 with col2.expander("Water Log"):
+  weight = st.text_input("Enter some text")
   st.write("this is a test")
   
 with col3.expander("Food Log"):
