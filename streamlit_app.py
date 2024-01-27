@@ -6,7 +6,7 @@ with col1.expander("Home"):
   st.write("this is a test")
 
 with col2.expander("Water Log"):
-  weight = st.text_input("Enter some text")
+  choice = st.number_input(label = "Adjust water", step = 1)
   st.write("this is a test")
   
 with col3.expander("Food Log"):
@@ -17,7 +17,7 @@ with col4.expander("Exercise Log"):
   
 
 # USER INPUT + VARIABLE STORING
-weight = st.text_input("Enter some text")
+# weight = st.text_input("Enter some text")
 
 choice = st.number_input(label = "Adjust water", step = 1)
 st.image("cup.png")
