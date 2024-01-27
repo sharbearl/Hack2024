@@ -26,9 +26,15 @@ def update_prog_calorie(calorie, calorie_bar, type, mid):
 		percentage = calc_prog_calorie_cut(calorie)
 	else:
 		percentage = calc_prog_calorie(calorie)
+		
+def toggleflag(flag):
+	if flag == True:
+		flag = False
+	else:
+		flag = True
 	
 if __name__ == "__main__":
-
+	flag_water = False
 	col1, col2, col3, col4 = st.columns(4)
 	_left, mid, _right = st.columns(3)
 	img = "thirstyanteater.png"
@@ -45,6 +51,9 @@ if __name__ == "__main__":
 		switch = st.button("Water Log")
 	  # choice = st.number_input(label = "Adjust water", step = 1)
 		if switch:
+			toggleflag(flag_water)
+			
+		if flag_press:
 			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 			update_progress_water(water_val, water_bar, mid)
 		else:
