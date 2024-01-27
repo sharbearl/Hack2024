@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
 	water_text = "Water"
 	img = "thirstyanteater.png"
-	st.image(img, width=10)
+	st.image(img, width=300)
 	water_bar = st.progress(0, text=water_text)
 	
 	with col1.expander("Home"):
