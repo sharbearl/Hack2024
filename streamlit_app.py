@@ -34,8 +34,8 @@ if __name__ == "__main__":
 		if switch:
 			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 			update_progress(water_val, water_bar, mid)
-	else:
-		water_bar.empty()
+		else:
+			water_bar.empty()
 	  
 	with col3.expander("Food Log"):
 	  st.write("this is a test")
