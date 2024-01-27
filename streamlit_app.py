@@ -3,13 +3,15 @@ import streamlit as st
 def calculate_progress(val):
 	return (100/11)*val 
 
-def update_progress(choice, water_bar):
+def update_progress(choice, water_bar, mid):
 	water_progress = calculate_progress(choice)
 	if water_progress < 100:
 		water_bar.progress(water_progress/100, text="Water")
 	else:
 		water_bar.progress(100, text="Nice! You've drank the recommended amount of water!")
 		img = "happyanteater.png"
+		with mid.empty():
+			st.image(img, width=300)
 
 
 if __name__ == "__main__":
@@ -17,7 +19,8 @@ if __name__ == "__main__":
 	col1, col2, col3, col4 = st.columns(4)
 	_left, mid, _right = st.columns(3)
 	img = "thirstyanteater.png"
-	mid.image(img, width=300)		
+	with mid.empty():
+		st.image(img, width=300)		
 		
 	water_text = "Water"
 	water_bar = st.progress(0, text=water_text)
@@ -40,7 +43,7 @@ if __name__ == "__main__":
 	#water_expander = col5.expander("Water log")
 	
 	water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-	update_progress(water_val, water_bar)
+	update_progress(water_val, water_bar, mid)
 	st.selectbox(label = "Calorie", options = ["Bulk", "Cut", "Neither"])
 	
 	# USER INPUT + VARIABLE STORING
