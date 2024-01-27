@@ -10,6 +10,7 @@ def update_progress(choice, water_bar, mid):
 	else:
 		water_bar.progress(100, text="Nice! You've drank the recommended amount of water!")
 		img = "happyanteater.png"
+		mid.empty()
 		with mid.empty():
 			st.image(img, width=300)
 
