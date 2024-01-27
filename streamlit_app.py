@@ -36,5 +36,5 @@ st.image("cup.png")
 
 water_text = "Water"
 water_bar = st.progress(0, text=water_test)
-def update_progress()
+def update_progress():
   water_bar.progress(water_val + 1, text=water_text)
