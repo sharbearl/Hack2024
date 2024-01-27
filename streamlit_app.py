@@ -1,4 +1,5 @@
 import streamlit as st
+water_val = 0
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
@@ -18,7 +19,9 @@ with col4.expander("Exercise Log"):
 # water_checkbox = col5.checkbox("Water check")
 
 def update():
-  st.write("testing")
+  water_val = water_val + 1
+  update_progress()
+  
 water_expander = col5.expander("Water log")
 print("TEST PRINT")
 if (water_expander):
@@ -30,3 +33,8 @@ if (water_expander):
 
 # choice = st.number_input(label = "Adjust water", step = 1)
 st.image("cup.png")
+
+water_text = "Water"
+water_bar = st.progress(0, text=water_test)
+def update_progress()
+  water_bar.progress(water_val + 1, text=water_text)
