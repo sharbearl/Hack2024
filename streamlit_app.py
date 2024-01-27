@@ -40,6 +40,7 @@ if __name__ == "__main__":
 	# weight = st.text_input("Enter some text")
 	form = st.form("Water")
 	with st.sidebar:
+		st.title("ABOUT")
 		st.text("BOO")
 	
 	st.image("cup.png")
