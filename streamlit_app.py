@@ -7,7 +7,7 @@ def update_progress(choice, water_bar):
 	water_progress = calculate_progress(choice)
 	st.text(water_progress)
 	if water_progress < 100:
-		water_bar = st.progress(1, text="Water")
+		water_bar = st.progress(choice, text="Water")
 
 
 if __name__ == "__main__":
