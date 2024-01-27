@@ -28,7 +28,7 @@ if __name__ == "__main__":
 	with col1.expander("Home"):
 	  st.write("this is a test")
 	
-	switch = col2.button('Water Log'):
+	switch = col2.button('Water'):
 	  # choice = st.number_input(label = "Adjust water", step = 1)
 	if switch:
 		water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
