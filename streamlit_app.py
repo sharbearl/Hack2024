@@ -35,8 +35,7 @@ if __name__ == "__main__":
 	# weight = st.text_input("Enter some text")
 	form = st.form("Water")
 	with st.sidebar:
-		with col5.expander(“Adjust Water”):
-			st.text("BOO")
+		st.text("BOO")
 	
 	st.image("cup.png")
 	return 0
