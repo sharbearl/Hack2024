@@ -10,5 +10,5 @@ food = st.expander("Food Log")
 # USER INPUT + VARIABLE STORING
 weight = st.text_input("Enter some text")
 
-choice = st.number_input("Adjust water")
+choice = st.number_input("Adjust water", step = 1, format = %d)
 
