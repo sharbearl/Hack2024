@@ -9,3 +9,10 @@ button.tracking-buttons {
   font-size:20px;
   padding:10px;
 }
+
+#water {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
