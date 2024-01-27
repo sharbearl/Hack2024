@@ -19,4 +19,4 @@ with col4.expander("Exercise Log"):
 weight = st.text_input("Enter some text")
 
 choice = st.number_input(label = "Adjust water", step = 1)
-st.image(“cup.png”)
+st.image("cup.png")
