@@ -22,5 +22,5 @@ with col5.checkbox("Water check"):
 # USER INPUT + VARIABLE STORING
 # weight = st.text_input("Enter some text")
 
-choice = st.number_input(label = "Adjust water", step = 1)
+# choice = st.number_input(label = "Adjust water", step = 1)
 st.image("cup.png")
