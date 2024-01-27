@@ -38,4 +38,3 @@ if __name__ == "__main__":
 		st.text("BOO")
 	
 	st.image("cup.png")
-	return 0
