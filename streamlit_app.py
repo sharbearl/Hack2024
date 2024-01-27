@@ -5,10 +5,15 @@ col1, col2, col3, col4 = st.columns(4)
 with col1.expander("Home"):
   st.write("this is a test")
 
-water = st.expander("Water Log")
-water.write("this is a test")
-exercise = st.expander("Exercise Log")
-food = st.expander("Food Log")
+with col2.expander("Water Log"):
+  st.write("this is a test")
+  
+with col3.expander("Food Log"):
+  st.write("this is a test")
+  
+with col4.expander("Exercise Log"):
+  st.write("this is a test")
+  
 
 # USER INPUT + VARIABLE STORING
 weight = st.text_input("Enter some text")
