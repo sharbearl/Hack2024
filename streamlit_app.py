@@ -15,8 +15,10 @@ with col3.expander("Food Log"):
 with col4.expander("Exercise Log"):
   st.write("this is a test")
 
-water_checkbox = col5.checkbox("Water check")
-if (water_checkbox):
+# water_checkbox = col5.checkbox("Water check")
+water_expander = col5.expander("Water log")
+print("TEST PRINT")
+if (water_expander):
     choice = st.number_input(label = "Adjust water", step = 1)
     st.write("this is a test")
 
