@@ -55,7 +55,7 @@ if __name__ == "__main__":
 	#water_expander = col5.expander("Water log")
 	
 	water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-	update_progress(water_val, water_bar, mid)
+	update_progress_water(water_val, water_bar, mid)
 	option = st.selectbox(label = "Food Calorie Tracking", options = ["Bulk", "Cut", "Neither"])
 	calorie_bar = st.progress(0, text = "Calorie Count")
 	if option == "Bulk":
