@@ -11,3 +11,15 @@ food = st.expander("Food Log")
 weight = st.text_input("Enter some text")
 
 choice = st.number_input("Adjust water")
+
+#BACKGROUND COLOR
+st.markdown(
+	f”””
+	<style> 
+	.reportview-container {{
+		Background: #C3B1E1
+	}}
+	</style>
+	“””,
+	unsafe_allow_html=True
+)
