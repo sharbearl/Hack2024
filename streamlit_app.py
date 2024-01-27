@@ -42,6 +42,7 @@ if __name__ == "__main__":
 	    water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 	    update_progress(water_val, water_bar)
 	    st.write("this is a test")
+	st.multiselect(label = "Calorie", options = ["Bulk", "Cut", "Neither"], max_selections = 1)
 	
 	# USER INPUT + VARIABLE STORING
 	# weight = st.text_input("Enter some text")
