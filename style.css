@@ -1,10 +1,11 @@
-button.tracking-button {
+button.tracking-buttons {
   cursor:pointer;
   padding:10px;
   border-radius:10px;
 }
 
 .Title {
+  font-family: "Monaco", Monospace;
   font-size:20px;
   padding:10px;
 }
