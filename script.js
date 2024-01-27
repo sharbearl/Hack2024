@@ -10,6 +10,7 @@ function increaseWater()
 function toggleShow()
 {
   let water_div = document.getElementById("water_dropdown");
+  console.log(water_div.style.visibility);
   if (water_div.style.visibility === "visible")
   {
     water_div.style.display = "hidden";
@@ -22,6 +23,6 @@ function toggleShow()
 
 function updateText()
 {
-  let text_div = dovument.getElementById("water_record");
+  let text_div = document.getElementById("water_record");
   text_div.innerHTML = cups;
 }
