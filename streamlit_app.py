@@ -52,7 +52,8 @@ if __name__ == "__main__":
 	  # choice = st.number_input(label = "Adjust water", step = 1)
 		if switch:
 			toggleflag(flag_water)
-			
+
+		st.text(flag_water)
 		if flag_water == True:
 			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 			update_progress_water(water_val, water_bar, mid)
