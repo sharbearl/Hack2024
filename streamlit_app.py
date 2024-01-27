@@ -19,7 +19,7 @@ with col4.expander("Exercise Log"):
 # water_checkbox = col5.checkbox("Water check")
 
 def update():
-  water_val = water_val + 1
+  water_val += 1
   update_progress()
   
 water_expander = col5.expander("Water log")
