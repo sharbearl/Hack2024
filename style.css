@@ -22,18 +22,17 @@ button.tracking-buttons:hover{
   padding:10px;
 }
 
-#water {
-  width: 50%;
-  height: 50%;
-  text-align: center;
-}
-
 #water_dropdown {
    visibility: hidden;
+   height: 
 }
 
-#Avatar {
-  margin-top: 100px;
+#Water {
+  position: absolute;
+  width: 268px;
+  height: 565px;
+  left: 50%;
+  top: 50%;
 }
 
 body {
