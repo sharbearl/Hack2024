@@ -16,7 +16,6 @@ if __name__ == "__main__":
 
 	col1, col2, col3, col4, col5 = st.columns(5)
 	
-	water_text = "Water"
 	st.image("thirstyanteater.png")
 	water_bar = st.progress(0, text=water_text)
 	
