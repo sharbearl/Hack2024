@@ -8,6 +8,8 @@ def update_progress(choice, water_bar):
 	st.text(water_progress)
 	if water_progress < 100:
 		water_bar.progress(water_progress/100, text="Water")
+	else:
+		water_bar.progress(100, text="Nice! You've drank the recommended amount of water!")
 
 
 if __name__ == "__main__":
