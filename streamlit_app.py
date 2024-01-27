@@ -1,10 +1,10 @@
 import streamlit as st
 
-def calculate_progress(val):
+def calculate_progress_water(val):
 	return (100/11)*val 
 
-def update_progress(choice, water_bar, mid):
-	water_progress = calculate_progress(choice)
+def update_progress_water(choice, water_bar, mid):
+	water_progress = calculate_progress_water(choice)
 	if water_progress < 100:
 		water_bar.progress(water_progress/100, text="Water")
 	else:
@@ -12,8 +12,21 @@ def update_progress(choice, water_bar, mid):
 		img = "happyanteater.png"
 		mid.empty()
 		mid.image(img, width=300)
+def calc_prog_calorie_bulk(calorie):
+	return calorie * (100/3500)
+def calc_prog_calorie_cut(calorie):
+	return calorie * (100/1700)
+def calc_prog_calorie(calorie):
+	return calorie * (100/2000)
 
-
+def update_prog_calorie(calorie, calorie_bar, type, mid):
+	if type == "Bulk":
+		percentage = calc_prog_calorie_bulk(calorie)
+	elif type == "Cut":
+		percentage = calc_prog_calorie_cut(calorie)
+	else:
+		percentage = calc_prog_calorie(calorie)
+	
 if __name__ == "__main__":
 
 	col1, col2, col3, col4 = st.columns(4)
@@ -33,7 +46,7 @@ if __name__ == "__main__":
 	  # choice = st.number_input(label = "Adjust water", step = 1)
 		if switch:
 			water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
-			update_progress(water_val, water_bar, mid)
+			update_progress_water(water_val, water_bar, mid)
 		else:
 			water_bar.empty()
 	  
@@ -50,12 +63,13 @@ if __name__ == "__main__":
 	# water_val = st.number_input(label = "Adjust water", min_value = 0, step = 1)
 	# update_progress(water_val, water_bar, mid)
 	option = st.selectbox(label = "Food Calorie Tracking", options = ["Bulk", "Cut", "Neither"])
+	calorie_bar = st.progress(0, text = "Calorie Count")
 	if option == "Bulk":
-		st.progress(0, text = "Calorie Count")
+		calorie_bar.empty()
 	elif option == "Cut":
-		st.progress(0, text = "Calorie Count")
+		calorie_bar.empty()
 	else:
-		st.progress(0, text = "Calorie Count")
+		calorie_bar.empty()
 	# USER INPUT + VARIABLE STORING
 	# weight = st.text_input("Enter some text")
 	form = st.form("Water")
