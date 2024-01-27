@@ -51,6 +51,7 @@ if __name__ == "__main__":
 		switch = st.button("Water Log")
 	  # choice = st.number_input(label = "Adjust water", step = 1)
 		if switch:
+			st.text("switch")
 			toggleflag(flag_water)
 
 		st.text(flag_water)
