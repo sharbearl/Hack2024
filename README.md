@@ -8,7 +8,7 @@ Website:
 - sleep
 Databases/Pulling data via API
 - pulling all the recommended amounts stated above
-- Pulling the daily weather + displaying on the background 
+- Pulling the daily weather + displaying on the background (rain, sunny, cloudy, clear sky)
 
 // Idea 1
 Choose your own avatar by selecting customizable choices
