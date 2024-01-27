@@ -47,4 +47,4 @@ if __name__ == "__main__":
 		st.title("ABOUT")
 		st.text("BOO")
 	
-	st.image("anteater.png")
+	st.image("thirstyanteater.png")
