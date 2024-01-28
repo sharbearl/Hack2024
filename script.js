@@ -2,12 +2,20 @@ let cups = 0;
 localStorage.setItem("cups", 0);
 localStorage.getItem("cups");
 
+
 function increaseWater()
 {
- if (cups < 11)
+ if (cups < 10)
  {
   cups = cups + 1; 
   updateText();
+ }
+ else if (cups = 10)
+ {
+    cups = 11; 
+    updateText();
+    document.getElementById("Water").style.display = "none";
+    document.getElementById("Hydrate").style.display = "block";
  }
 }
 
