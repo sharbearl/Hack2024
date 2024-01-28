@@ -32,15 +32,15 @@ function increaseWater()
 function toggleShow()
 {
   let water_div = document.getElementById("water_dropdown");
-  console.log(water_div.style.visibility);
-  if (water_div.style.visibility === "visible")
+  console.log(water_div.style.display);
+  if (water_div.style.display === "block")
   {
-    water_div.style.visibility = "hidden";
+    water_div.style.display = "none";
     console.log("Hiding");
   }
   else
   {
-    water_div.style.visibility = "visible";
+    water_div.style.display = "block";
     console.log("Showing");
   }
 }
