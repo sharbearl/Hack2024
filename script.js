@@ -90,19 +90,19 @@ function increaseCalories(amount)
  if (calorie < 1999)
  {
   calorie = calorie + amount; 
+  //localStorage.setItem("cups", String(cups));
+  updateText("food_record");
   if (calorie >= 1999)
   {
-     calorie = 1999;    
+     calorie = 2000;    
      let text_div = document.getElementById("food_record");
+	console.log(text_div);
      text_div.innerHTML = "You ate 2000 calories today!";
      document.getElementById("Hungry").style.display = "none";
      document.getElementById("Hydrate").style.display = "block";
   }
-  //localStorage.setItem("cups", String(cups));
-  updateText("food_record");
   let elem = document.getElementById("food_bar");
   elem.style.width = (100/2000)*calorie + "%";
-  
  }
  else if (calorie = 1999)
  {
@@ -239,6 +239,7 @@ function updateText(id)
     }
   }
 }
+
 function outputUpdate(num) {
     document.querySelector('#output').value = num;
     }
