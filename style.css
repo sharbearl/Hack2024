@@ -103,6 +103,13 @@ button.tracking-buttons:hover{
   bottom: 10px;
 }
 
+.icon {
+  position: fixed;
+  height: 25px;
+  bottom: 13px;
+  left: 290px;
+}
+
 body {
   background-color: #e4dcf5;
 }
