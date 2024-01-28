@@ -27,7 +27,7 @@ function increaseWater()
  if (cups < 10)
  {
   cups = cups + 1; 
-  localStorage.setItem("cups", JSON.stringify({cups}));
+  localStorage.setItem("cups", String(cups));
   updateText("water_record");
   let elem = document.getElementById("water_bar");
 
@@ -40,7 +40,7 @@ function increaseWater()
  else if (cups = 10)
  {
     cups = 11;
-    localStorage.setItem("cups", JSON.stringify({cups}));
+    localStorage.setItem("cups", String(cups));
     let text_div = document.getElementById("water_record");
     text_div.innerHTML = "You drank 11 cups today!";
     let elem = document.getElementById("water_bar");
