@@ -51,6 +51,12 @@ button.tracking-buttons:hover{
   font-size: 50px;
 }
 
+#sleep_record {
+  font-family: "Monaco", Monospace;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
 #meal_dropdown {
   display: none;
   margin: auto;
@@ -63,7 +69,7 @@ button.tracking-buttons:hover{
   display: none;
   margin: auto;
   height: 200px;
-  width: 30%;
+  width: 50%;
   text-align: center;
 }
 
@@ -160,7 +166,7 @@ body {
     position : relative;
     top : 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,20%);
     width: 500px;
     height: 60px;
     padding: 30px;
