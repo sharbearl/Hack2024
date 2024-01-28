@@ -337,7 +337,7 @@ function toggleShowExercise()
 function toggleAbout()
 {
   let about_div = document.getElementById("about_dropdown");
-  let about_display = water_div.style.display;
+  let about_display = about_div.style.display;
   clearmenu();
   console.log(about_div.style.display);
   if (about_display === "block")
@@ -347,7 +347,7 @@ function toggleAbout()
   }
   else
   {  
-    water_div.style.display = "block";
+    about_div.style.display = "block";
   }
 }
 
