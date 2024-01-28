@@ -2,22 +2,50 @@ let cups = 0;
 let calorie = 0;
 let zs = 0;
 let workout = 0;
-let water_width = 0;
 
 if (localStorage.getItem("cups") != undefined)
 {
     cups = Number(localStorage.getItem("cups"));
-    console.log(cups)
     updateText("water_record")
+}
+if (localStorage.getItem("calorie") != undefined)
+{
+    calorie = Number(localStorage.getItem("calorie"));
+    updateText("food_record")
+}
+if (localStorage.getItem("zs") != undefined)
+{
+    zs = Number(localStorage.getItem("zs"));
+    updateText("exercise_record")
+}
+if (localStorage.getItem("workout") != undefined)
+{
+    workout = Number(localStorage.getItem("workout"));
+    updateText("sleep_record")
 }
 
 function resetcups()
 {
   cups = 0;
-  updateText("water_record");    
-  let elem = document.getElementById("water_bar");
-  elem.style.width = "1px";
-  water_width = 0;
+  calorie = 0;
+  zs = 0;
+  workout = 0;
+  updateText("water_record");
+  updateText("food_record");
+  updateText("exercise_record");
+  updateText("sleep_record");
+  // water bar
+  let elem1 = document.getElementById("water_bar");
+  elem1.style.width = "1px";
+  // food bar
+  let elem2 = document.getElementById("food_bar");
+  elem2.style.width = "1px";
+  // zs bar
+  let elem3 = document.getElementById("exercise_bar");
+  elem3.style.width = "1px";    
+  // workout bar
+  let elem4 = document.getElementById("sleep_bar");
+  elem4.style.width = "1px";
   localStorage.removeItem("cups");
   localStorage.clear();
   clearmenu();
@@ -55,7 +83,7 @@ function toggleShowWater()
   {
     cups = Number(localStorage.getItem("cups"));
     console.log(cups);
-    updateText("food_record");    
+    updateText("water_record");    
     let elem = document.getElementById("water_bar");
     elem.style.width = (100/11)*cups + "%";
   }
@@ -90,11 +118,13 @@ function increaseCalories(amount)
  if (calorie < 1999)
  {
   calorie = calorie + amount; 
-  //localStorage.setItem("cups", String(cups));
+  localStorage.setItem("calorie", String(calorie));
   updateText("food_record");
   if (calorie >= 1999)
   {
      calorie = 2000;    
+     localStorage.setItem("calorie", String(calorie));
+     updateText("food_record");
      let text_div = document.getElementById("food_record");
 	console.log(text_div);
      text_div.innerHTML = "You ate 2000 calories today!";
@@ -107,7 +137,8 @@ function increaseCalories(amount)
  else if (calorie = 1999)
  {
     calorie = 1999;
-    //localStorage.setItem("cups", String(cups));
+    localStorage.setItem("calorie", String(calorie));
+    updateText("food_record");
     let text_div = document.getElementById("food_record");
     text_div.innerHTML = "You ate 2000 calories today!";
     let elem = document.getElementById("calorie_bar");
@@ -119,7 +150,13 @@ function increaseCalories(amount)
 
 function toggleShowMeal()
 {
-  //Need to add local storage
+  if (localStorage.getItem("calorie") != undefined)
+  {
+    calorie = Number(localStorage.getItem("calorie"));
+    updateText("food_record");
+    let elem = document.getElementById("food_bar");
+    elem.style.width = (100/2000)*calorie + "%";
+  }
   clearsprites();
   let meal_div = document.getElementById("meal_dropdown");
   let meal_display = meal_div.style.display;
@@ -155,6 +192,8 @@ function increaseSleep()
   if (zs > 9)
   {
      zs = 9;
+     localStorage.setItem("zs", String(zs));
+     updateText("sleep_record");
      let text_div = document.getElementById("sleep_record");
 
      text_div.innerHTML = "You slept enough today!";
@@ -164,6 +203,7 @@ function increaseSleep()
   else
   {
      let text_div = document.getElementById("sleep_record");
+     localStorage.setItem("zs", String(zs));
 	console.log(text_div);
      text_div.innerHTML = "Sleep more tomorrow!";
   }
@@ -175,6 +215,13 @@ function increaseSleep()
 function toggleShowSleep()
 {
   //Need to add local storage
+  if (localStorage.getItem("zs") != undefined)
+  {
+    zs = Number(localStorage.getItem("zs"));
+    updateText("sleep_record");
+    let elem = document.getElementById("sleep_bar");
+    elem.style.width = (100/9)*zs + "%";
+  }
   clearsprites();
   let sleep_div = document.getElementById("sleep_dropdown");
   let sleep_display = sleep_div.style.display;
@@ -206,11 +253,13 @@ function increaseBurn(amount)
  if (workout < 1999)
  {
   workout = workout + amount; 
-  //localStorage.setItem("cups", String(cups));
+  localStorage.setItem("workout", String(workout));
   updateText("exercise_record");
   if (workout >= 1999)
   {
      workout = 2000;    
+     localStorage.setItem("workout", String(workout));
+     updateText("exercise_record");
      let text_div = document.getElementById("exercise_record");
 	console.log(text_div);
      text_div.innerHTML = "You burned 2000 calories today!";
@@ -220,10 +269,11 @@ function increaseBurn(amount)
   let elem = document.getElementById("exercise_bar");
   elem.style.width = (100/2000)*workout + "%";
  }
- else if (workout = 1999)
+ else
  {
-    workout = 1999;
-    //localStorage.setItem("cups", String(cups));
+    workout = 2000;
+    localStorage.setItem("workout", String(workout));
+    updateText("exercise_record");
     let text_div = document.getElementById("exercise_record");
     text_div.innerHTML = "You burned 2000 calories today!";
     let elem = document.getElementById("workout_bar");
@@ -235,7 +285,13 @@ function increaseBurn(amount)
 
 function toggleShowExercise()
 {
-  //Need to add local storage
+  if (localStorage.getItem("workout") != undefined)
+  {
+    calorie = Number(localStorage.getItem("workout"));
+    updateText("exercise_record");
+    let elem = document.getElementById("exercise_bar");
+    elem.style.width = (100/2000)*workout + "%";
+  }
   clearsprites();
   let exercise_div = document.getElementById("exercise_dropdown");
   let exercise_display = exercise_div.style.display;
