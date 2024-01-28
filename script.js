@@ -51,6 +51,9 @@ function resetcups()
   clearmenu();
   clearsprites();
   document.getElementById("Default").style.display = "block";
+  document.getElementById("sleepSlider").style.display = "block";
+  document.getElementById("submit").style.display = "block";
+  document.getElementById("sleep_record").style.display = "none";
 }
 
 function increaseWater()
@@ -189,7 +192,8 @@ function increaseSleep()
   zs = Number(sleep_div.innerHTML);
   document.getElementById("sleepSlider").style.display = "none";
   document.getElementById("submit").style.display = "none";
-  if (zs > 9)
+  document.getElementById("sleep_record").style.display = "block";
+  if (zs >= 9)
   {
      zs = 9;
      localStorage.setItem("zs", String(zs));
@@ -219,6 +223,18 @@ function toggleShowSleep()
   {
     zs = Number(localStorage.getItem("zs"));
     updateText("sleep_record");
+    if (zs < 9)
+    {
+        let text_div = document.getElementById("sleep_record");
+        text_div.innerHTML = "Sleep more tomorrow!";
+    }
+    else
+    {
+        let text_div = document.getElementById("sleep_record");
+        text_div.innerHTML = "You slept enough today!";
+    }
+    document.getElementById("sleepSlider").style.display = "none";
+    document.getElementById("submit").style.display = "none";
     let elem = document.getElementById("sleep_bar");
     elem.style.width = (100/9)*zs + "%";
   }
@@ -352,6 +368,10 @@ function updateText(id)
     else if (id === "exercise_record")
     {
       text_div.innerHTML = workout;
+    }
+    else
+    {
+
     }
   }
 }
