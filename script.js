@@ -97,7 +97,7 @@ function increaseCalories(amount)
      document.getElementById("Hydrate").style.display = "block";
   }
   //localStorage.setItem("cups", String(cups));
-  updateText("water_record");
+  updateText("food_record");
   let elem = document.getElementById("food_bar");
   elem.style.width = (100/2000)*calorie + "%";
   
@@ -225,7 +225,16 @@ function updateText(id)
   let text_div = document.getElementById(id);
   if (text_div != null)
   {
-    text_div.innerHTML = cups;
+    if (id === "water_record")
+    {
+      text_div.innerHTML = cups;
+    }
+    else if (id === "food_record")
+    {
+      console.log(text_div.innerHtml);
+      console.log(text_div);
+      text_div.innerHTML = calorie;
+    }
   }
 }
 function outputUpdate(num) {
