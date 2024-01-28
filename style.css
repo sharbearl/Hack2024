@@ -108,6 +108,21 @@ button.tracking-buttons:hover{
   border-radius:10px;
 }
 
+#about_dropdown {
+  display: none;
+  margin: auto;
+  height: 200px;
+  width: 50%;
+  text-align: center;
+  background-color: #d8ceed;
+  border-radius:10px;
+  font-family: "Times New Roman", Serif;
+  margin-top: 30px;
+  font-size: 20px;
+}
+#about_div {
+  padding:10px;
+}
 
 .sprites {
   display: none;
@@ -219,11 +234,12 @@ body {
         border : none;
         outline : none;
     }
+
 #about {
 	font-family: "Times New Roman", Serif;
 	position: fixed;
 	text-align: right;
-	bottom: 20px;
+	bottom: 10px;
 	right: 20px;
 	
 }
