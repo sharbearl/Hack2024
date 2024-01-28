@@ -84,6 +84,7 @@ button.tracking-buttons:hover{
 .prog {
     width: 100%;
     Background-color: grey;
+    outline: 1px solid black;
 }
 
 .bar {
