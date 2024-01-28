@@ -79,6 +79,12 @@ button.tracking-buttons:hover{
   text-align: center;
 }
 
+#bars {
+  position: fixed;
+  width: 30%;
+  bottom: 10px;
+}
+
 body {
   background-color: #e4dcf5;
 }
