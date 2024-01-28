@@ -1,5 +1,6 @@
 let cups = 0;
-
+localStorage.setItem("cups", 0);
+localStorage.getItem("cups");
 
 function increaseWater()
 {
