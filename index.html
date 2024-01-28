@@ -11,8 +11,8 @@
     <div id = "Buttons">
       <button type="button" class="tracking-buttons" onclick="toggleShowWater();")>Record Water</button>
       <button type="button" class="tracking-buttons" onclick="toggleShowMeal()">Record Meal</button>
-      <button type="button" class="tracking-buttons">Record Sleep</button>
-      <button type="button" class="tracking-buttons">Record Workout</button>
+      <button type="button" class="tracking-buttons" onclick="toggleShowSleep();">Record Sleep</button>
+      <button type="button" class="tracking-buttons" onclick="toggleShowExercise();">Record Workout</button>
       <button type="button" class="tracking-buttons" onclick = "resetcups();")>Reset</button>
     </div>
 
@@ -24,30 +24,43 @@
     </div>
 
     <div id = "meal_dropdown" class = "dropmenu">
-	<p>test</p>
+	<p>test1</p>
+    </div>
+
+    <div id = "sleep_dropdown" class = "dropmenu">
+	<p>test2</p>
+    </div>
+
+    <div id = "exercise_dropdown" class = "dropmenu">
+	<p>test3</p>
     </div>
 
     <div id = "Avatar">
       <img id="Default" class="sprites" src="defaultanteater.png">
       <img id="Water" class="sprites" src="thirstyanteater.png">
       <img id="Hydrate" class="sprites" src="happyanteater.png">
+      <img id="Hungry" class="sprites" src="hungryanteater.png">
     </div>
 
     <div id = "bars">
       <div id = "water_prog" class="prog">
       	<div id = "water_bar" class="bar"></div>
+	
       </div>
 
       <div id = "food_prog" class="prog">
       	<div id = "food_bar" class="bar"></div>
+	
       </div>
 
       <div id = "sleep_prog" class="prog">
       	<div id = "sleep_bar" class="bar"></div>
+	
       </div>
 
       <div id = "exercise_prog" class="prog">
       	<div id = "exercise_bar" class="bar"></div>
+	
       </div>
       
     </div>
