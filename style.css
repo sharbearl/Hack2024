@@ -57,6 +57,12 @@ button.tracking-buttons:hover{
   font-size: 50px;
 }
 
+#exercise_record {
+  font-family: "Monaco", Monospace;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
 #meal_dropdown {
   display: none;
   margin: auto;
@@ -77,7 +83,7 @@ button.tracking-buttons:hover{
   display: none;
   margin: auto;
   height: 200px;
-  width: 30%;
+  width: 100%;
   text-align: center;
 }
 
