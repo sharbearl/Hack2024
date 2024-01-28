@@ -1,7 +1,8 @@
 let cups = 0;
+let water_num = 0;
+let water_width = 0;
 localStorage.setItem("cups", 0);
 localStorage.getItem("cups");
-
 
 function increaseWater()
 {
@@ -9,11 +10,20 @@ function increaseWater()
  {
   cups = cups + 1; 
   updateText();
+  let elem = document.getElementById("water_bar");
+
+  if (water_width < 100) {
+    water_width = water_width + 1; 
+    elem.style.width = (100/11)*water_width + "%";
+
+  }
  }
  else if (cups = 10)
  {
     cups = 11; 
     updateText();
+    let elem = document.getElementById("water_bar");
+    elem.style.width = "100%";
     document.getElementById("Water").style.display = "none";
     document.getElementById("Hydrate").style.display = "block";
  }
