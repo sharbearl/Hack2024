@@ -9,20 +9,24 @@
   <body>
     <div id = "Title">TBD</div>
     <div id = "Buttons">
-      <button type="button" class="tracking-buttons" onclick="toggleShow();")>Record Water</button>
-      <button type="button" class="tracking-buttons"">Record Meal</button>
+      <button type="button" class="tracking-buttons" onclick="toggleShowWater();")>Record Water</button>
+      <button type="button" class="tracking-buttons" onclick="toggleShowMeal()">Record Meal</button>
       <button type="button" class="tracking-buttons">Record Sleep</button>
       <button type="button" class="tracking-buttons">Record Workout</button>
     </div>
 
-    <div id = "water_dropdown">
-      <p id = "water_record" class = "temp">0</p>
+    <div id = "water_dropdown" class = "dropmenu">
+      <p id = "water_record">0</p>
       <div id = "water_prog">
       	<div id = "water_bar"></div>
       </div>
       <div id = "Buttons">
         <button type="button" class="tracking-buttons" onclick="increaseWater();">+</button>
       </div>
+    </div>
+
+    <div id = "meal_dropdown" class = "dropmenu">
+	<p>test</p>
     </div>
 
     <div id = "Avatar">
