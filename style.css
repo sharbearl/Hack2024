@@ -45,11 +45,17 @@ button.tracking-buttons:hover{
   font-size: 50px;
 }
 
+#food_record {
+  font-family: "Monaco", Monospace;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
 #meal_dropdown {
   display: none;
   margin: auto;
   height: 200px;
-  width: 30%;
+  width: 100%;
   text-align: center;
 }
 
@@ -103,6 +109,13 @@ button.tracking-buttons:hover{
   height: 300px;
   left: 40%;
   top: 50%;
+}
+
+.cal_img {
+  display: inline-block;
+  padding: 10px;
+  width: 10%;
+
 }
 
 .prog {
