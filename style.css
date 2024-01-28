@@ -28,7 +28,7 @@ button.tracking-buttons:hover{
 }
 
 #water_dropdown {
-  visibility: hidden;
+  display: none;
   margin: auto;
   height: 200px;
   width: 30%;
