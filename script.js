@@ -146,6 +146,32 @@ function toggleShowMeal()
   }
 }
 
+function increaseSleep()
+{
+  let sleep_div = document.getElementById("output");
+  zs = Number(sleep_div.innerHTML);
+  document.getElementById("sleepSlider").style.display = "none";
+  document.getElementById("submit").style.display = "none";
+  if (zs > 9)
+  {
+     zs = 9;
+     let text_div = document.getElementById("sleep_record");
+
+     text_div.innerHTML = "You slept enough today!";
+      document.getElementById("Hungry").style.display = "none";
+      document.getElementById("Hydrate").style.display = "block";
+  }
+  else
+  {
+     let text_div = document.getElementById("sleep_record");
+	console.log(text_div);
+     text_div.innerHTML = "Sleep more tomorrow!";
+  }
+  let elem = document.getElementById("sleep_bar");
+	console.log(elem);
+  elem.style.width = (100/9)*zs + "%";
+}
+
 function toggleShowSleep()
 {
   //Need to add local storage
@@ -239,7 +265,6 @@ function updateText(id)
     }
   }
 }
-
 function outputUpdate(num) {
     document.querySelector('#output').value = num;
     }
