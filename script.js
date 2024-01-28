@@ -4,12 +4,15 @@ let water_width = 0;
 function resetcups()
 {
   cups = 0;
-  updateText();    
+  updateText("water_record");    
   let elem = document.getElementById("water_bar");
   elem.style.width = "1px";
   water_width = 0;
   localStorage.removeItem("cups");
   localStorage.clear();
+  clearmenu();
+  clearsprites();
+  document.getElementById("Default").style.display = "block";
 }
 
 function increaseWater()
@@ -18,7 +21,7 @@ function increaseWater()
  {
   cups = cups + 1; 
   localStorage.setItem("cups", JSON.stringify({cups}));
-  updateText();
+  updateText("water_record");
   let elem = document.getElementById("water_bar");
 
   if (water_width < 100) {
@@ -67,9 +70,10 @@ function toggleShowWater()
     console.log("Showing");
   }
 }
+
 function toggleShowMeal()
 {
-
+  
   let meal_div = document.getElementById("meal_dropdown");
   let meal_display = meal_div.style.display;
   clearmenu();
@@ -104,8 +108,8 @@ function clearsprites()
    }
 }
 
-function updateText()
+function updateText(id)
 {
-  let text_div = document.getElementById("water_record");
+  let text_div = document.getElementById(id);
   text_div.innerHTML = cups;
 }
