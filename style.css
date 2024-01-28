@@ -45,8 +45,17 @@ button.tracking-buttons:hover{
   font-size: 50px;
 }
 
-#Water {
+#Default {
   display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 40%;
+  top: 50%;
+}
+
+#Water {
+  display: none;
   position: absolute;
   width: 300px;
   height: 300px;
