@@ -219,3 +219,9 @@ body {
         border : none;
         outline : none;
     }
+#about {
+	font-family: "Times New Roman", Serif;
+	position: fixed;
+	text-align: right;
+	bottom: 20px;
+}
