@@ -43,16 +43,6 @@ button.tracking-buttons:hover{
   display: none;
 }
 
-#water_dropdown {
-  display: none;
-  margin: auto;
-  height: 200px;
-  width: 30%;
-  text-align: center;
-  background-color: #d8ceed;
-  border-radius:10px;
-}
-
 #water_record {
   font-family: "Times New Roman", Serif;
   margin-top: 30px;
@@ -77,11 +67,22 @@ button.tracking-buttons:hover{
   font-size: 50px;
 }
 
+#water_dropdown {
+  display: none;
+  margin:auto;
+  margin-top: -30px;
+  height: 200px;
+  width: 50%;
+  text-align: center;
+  background-color: #d8ceed;
+  border-radius:10px;
+}
+
 #meal_dropdown {
   display: none;
   margin: auto;
   height: 200px;
-  width: 100%;
+  width: 50%;
   text-align: center;
   background-color: #d8ceed;
   border-radius:10px;
@@ -90,7 +91,7 @@ button.tracking-buttons:hover{
 #sleep_dropdown {
   display: none;
   margin: auto;
-  height: 200px;
+  height: 250px;
   width: 50%;
   text-align: center;
   background-color: #d8ceed;
@@ -101,11 +102,12 @@ button.tracking-buttons:hover{
   display: none;
   margin: auto;
   height: 200px;
-  width: 100%;
+  width: 50%;
   text-align: center;
   background-color: #d8ceed;
   border-radius:10px;
 }
+
 
 .sprites {
   display: none;
