@@ -1,4 +1,7 @@
 let cups = 0;
+let calorie = 0;
+let zs = 0;
+let workout = 0;
 let water_width = 0;
 
 if (localStorage.getItem("cups") != undefined)
@@ -99,7 +102,73 @@ function toggleShowMeal()
   }
   else
   {
+    if (calorie < 11)
+    {
+   	document.getElementById("Hungry").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("Hydrate").style.display = "block";
+    }
     meal_div.style.display = "block";
+    console.log("Showing");
+  }
+}
+
+function toggleShowSleep()
+{
+  //Need to add local storage
+  clearsprites();
+  let sleep_div = document.getElementById("sleep_dropdown");
+  let sleep_display = sleep_div.style.display;
+  clearmenu();
+  console.log(sleep_div.style.display);
+  if (sleep_display === "block")
+  {
+    document.getElementById("Default").style.display = "block";
+    sleep_div.style.display = "none";
+    console.log("Hiding");
+  }
+  else
+  {
+    if (zs < 9)
+    {
+   	document.getElementById("Hungry").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("Hydrate").style.display = "block";
+    }
+    sleep_div.style.display = "block";
+    console.log("Showing");
+  }
+}
+
+function toggleShowExercise()
+{
+  //Need to add local storage
+  clearsprites();
+  let exercise_div = document.getElementById("exercise_dropdown");
+  let exercise_display = exercise_div.style.display;
+  clearmenu();
+  console.log(exercise_div.style.display);
+  if (exercise_display === "block")
+  {
+    document.getElementById("Default").style.display = "block";
+    exercise_div.style.display = "none";
+    console.log("Hiding");
+  }
+  else
+  {
+    if (workout < 9)
+    {
+   	document.getElementById("Hungry").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("Hydrate").style.display = "block";
+    }
+    exercise_div.style.display = "block";
     console.log("Showing");
   }
 }
