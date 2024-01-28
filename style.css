@@ -42,12 +42,23 @@ button.tracking-buttons:hover{
 }
 
 #Water {
+  display: block;
   position: absolute;
   width: 300px;
   height: 300px;
   left: 40%;
   top: 40%;
 }
+
+#Hydrate {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 40%;
+  top: 40%;
+}
+
 
 #Buttons {
   margin: auto;
