@@ -59,6 +59,16 @@ button.tracking-buttons:hover{
   top: 40%;
 }
 
+#water_prog {
+    width: 100%;
+    Background-color: grey;
+}
+
+#water_bar {
+    width: 1px;
+    height: 30px;
+    Background-color: purple;
+}
 
 #Buttons {
   margin: auto;
