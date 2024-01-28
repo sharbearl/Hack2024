@@ -20,8 +20,8 @@ function increaseWater()
  }
  else if (cups = 10)
  {
-    cups = 11; 
-    updateText();
+    let text_div = document.getElementById("water_record");
+    text_div.innerHTML = "You drank 11 cups today!";
     let elem = document.getElementById("water_bar");
     elem.style.width = "100%";
     document.getElementById("Water").style.display = "none";
