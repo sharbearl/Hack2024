@@ -1,14 +1,20 @@
 let cups = 0;
 let water_num = 0;
 let water_width = 0;
-localStorage.setItem("cups", 0);
-localStorage.getItem("cups");
 
+function resetcups()
+{
+  cups = 0;
+  updateText();
+  localStorage.removeItem("cups");
+  localStorage.clear();
+}
 function increaseWater()
 {
  if (cups < 10)
  {
   cups = cups + 1; 
+  localStorage.setItem("cups", JSON.stringify({cups}));
   updateText();
   let elem = document.getElementById("water_bar");
 
@@ -20,6 +26,8 @@ function increaseWater()
  }
  else if (cups = 10)
  {
+    cups = 11;
+    localStorage.setItem("cups", JSON.stringify({cups}));
     let text_div = document.getElementById("water_record");
     text_div.innerHTML = "You drank 11 cups today!";
     let elem = document.getElementById("water_bar");
