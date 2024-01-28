@@ -228,3 +228,6 @@ function updateText(id)
     text_div.innerHTML = cups;
   }
 }
+function outputUpdate(num) {
+    document.querySelector('#output').value = num;
+    }
