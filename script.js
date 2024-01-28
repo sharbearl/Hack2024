@@ -73,13 +73,14 @@ function toggleShowWater()
 
 function toggleShowMeal()
 {
-  
+  clearsprites();
   let meal_div = document.getElementById("meal_dropdown");
   let meal_display = meal_div.style.display;
   clearmenu();
   console.log(meal_div.style.display);
   if (meal_display === "block")
   {
+    document.getElementById("Default").style.display = "block";
     meal_div.style.display = "none";
     console.log("Hiding");
   }
