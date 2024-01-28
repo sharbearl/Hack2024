@@ -5,7 +5,9 @@ let water_width = 0;
 function resetcups()
 {
   cups = 0;
-  updateText();
+  updateText();    
+  let elem = document.getElementById("water_bar");
+  elem.style.width = "1px";
   localStorage.removeItem("cups");
   localStorage.clear();
 }
