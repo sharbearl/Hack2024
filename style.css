@@ -45,6 +45,30 @@ button.tracking-buttons:hover{
   font-size: 50px;
 }
 
+#meal_dropdown {
+  display: none;
+  margin: auto;
+  height: 200px;
+  width: 30%;
+  text-align: center;
+}
+
+#sleep_dropdown {
+  display: none;
+  margin: auto;
+  height: 200px;
+  width: 30%;
+  text-align: center;
+}
+
+#exercise_dropdown {
+  display: none;
+  margin: auto;
+  height: 200px;
+  width: 30%;
+  text-align: center;
+}
+
 .sprites {
   display: none;
   position: absolute;
@@ -100,7 +124,7 @@ button.tracking-buttons:hover{
 
 #bars {
   position: fixed;
-  width: 30%;
+  width: 280px;
   bottom: 10px;
 }
 
