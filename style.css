@@ -81,12 +81,12 @@ button.tracking-buttons:hover{
   top: 50%;
 }
 
-#water_prog {
+.prog {
     width: 100%;
     Background-color: grey;
 }
 
-#water_bar {
+.bar {
     width: 1px;
     height: 30px;
     Background-color: purple;
