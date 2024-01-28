@@ -3,6 +3,7 @@ button.tracking-buttons {
   padding:20px;
   font-size:20px;
   border-radius:10px;
+  font-family: "Times New Roman", Serif;
 }
 
 button.tracking-buttons:hover{
@@ -22,9 +23,11 @@ button.tracking-buttons:hover{
 }
 
 #Title {
-  font-family: "Monaco", Monospace;
-  font-size:20px;
+  font-family: "Times New Roman", Serif;
+  font-size:50px;
   padding:10px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .dropmenu {
@@ -40,25 +43,25 @@ button.tracking-buttons:hover{
 }
 
 #water_record {
-  font-family: "Monaco", Monospace;
+  font-family: "Times New Roman", Serif;
   margin-top: 30px;
   font-size: 50px;
 }
 
 #food_record {
-  font-family: "Monaco", Monospace;
+  font-family: "Times New Roman", Serif;
   margin-top: 30px;
   font-size: 50px;
 }
 
 #sleep_record {
-  font-family: "Monaco", Monospace;
+  font-family: "Times New Roman", Serif;
   margin-top: 30px;
   font-size: 50px;
 }
 
 #exercise_record {
-  font-family: "Monaco", Monospace;
+  font-family: "Times New Roman", Serif;
   margin-top: 30px;
   font-size: 50px;
 }
