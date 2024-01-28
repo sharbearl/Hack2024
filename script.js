@@ -31,10 +31,12 @@ function increaseWater()
 
 function toggleShowWater()
 {
-  clearmenu();
+
   let water_div = document.getElementById("water_dropdown");
+  let water_display = water_div.style.display;
+  clearmenu();
   console.log(water_div.style.display);
-  if (water_div.style.display === "block")
+  if (water_display === "block")
   {
     water_div.style.display = "none";
     console.log("Hiding");
@@ -48,17 +50,19 @@ function toggleShowWater()
 
 function toggleShowMeal()
 {
+
+  let meal_div = document.getElementById("meal_dropdown");
+  let meal_display = meal_div.style.display;
   clearmenu();
-  let water_div = document.getElementById("meal_dropdown");
-  console.log(water_div.style.display);
-  if (water_div.style.display === "block")
+  console.log(meal_div.style.display);
+  if (meal_display === "block")
   {
-    water_div.style.display = "none";
+    meal_div.style.display = "none";
     console.log("Hiding");
   }
   else
   {
-    water_div.style.display = "block";
+    meal_div.style.display = "block";
     console.log("Showing");
   }
 }
