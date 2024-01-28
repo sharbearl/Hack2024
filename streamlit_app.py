@@ -71,6 +71,7 @@ if __name__ == "__main__":
 		calorie_bar.empty()
 	else:
 		calorie_bar.empty()
+	calorie_val = st.text_input(label = "Calorie Intake", min_value = 0)
 	# USER INPUT + VARIABLE STORING
 	# weight = st.text_input("Enter some text")
 	form = st.form("Water")
