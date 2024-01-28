@@ -1,5 +1,4 @@
 let cups = 0;
-let water_num = 0;
 let water_width = 0;
 
 function resetcups()
@@ -8,9 +7,11 @@ function resetcups()
   updateText();    
   let elem = document.getElementById("water_bar");
   elem.style.width = "1px";
+  water_width = 0;
   localStorage.removeItem("cups");
   localStorage.clear();
 }
+
 function increaseWater()
 {
  if (cups < 10)
