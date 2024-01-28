@@ -5,7 +5,7 @@ if (localStorage.getItem("cups") != undefined)
 {
     cups = Number(localStorage.getItem("cups"));
     console.log(cups)
-    updateText()
+    updateText("water_record")
 }
 
 function resetcups()
@@ -30,12 +30,9 @@ function increaseWater()
   localStorage.setItem("cups", String(cups));
   updateText("water_record");
   let elem = document.getElementById("water_bar");
+  elem.style.width = (100/11)*cups + "%";
 
-  if (water_width < 100) {
-    water_width = water_width + 1; 
-    elem.style.width = (100/11)*water_width + "%";
-
-  }
+  
  }
  else if (cups = 10)
  {
@@ -55,8 +52,10 @@ function toggleShowWater()
   if (localStorage.getItem("cups") != undefined)
   {
     cups = Number(localStorage.getItem("cups"));
-    console.log(cups)
-    updateText()
+    console.log(cups);
+    updateText("water_record");    
+    let elem = document.getElementById("water_bar");
+    elem.style.width = (100/11)*cups + "%";
   }
   clearsprites();
   let water_div = document.getElementById("water_dropdown");
