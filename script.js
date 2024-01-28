@@ -3,8 +3,11 @@ let cups = 0;
 
 function increaseWater()
 {
- cups = cups + 1; 
- updateText();
+ if (cups < 11)
+ {
+  cups = cups + 1; 
+  updateText();
+ }
 }
 
 function toggleShow()
