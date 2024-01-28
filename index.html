@@ -7,7 +7,7 @@
     
   </head>
   <body>
-    <div id = "Title">Fitness App</div>
+    <div id = "Title">Anteater's Guide to Fitness</div>
     <div id = "Buttons">
       <button type="button" class="tracking-buttons" onclick="toggleShowWater();")>Record Water</button>
       <button type="button" class="tracking-buttons" onclick="toggleShowMeal()">Record Meal</button>
@@ -35,12 +35,16 @@
     </div>
 
     <div id = "sleep_dropdown" class = "dropmenu">
-	<div class = "slider">
-        <label for = "fader"> Hours of Sleep </label><input type = "range" min = "0" max = "24" value = "0" id="fader" step = 1 oninput="outputUpdate(value)">
-        <output for = value id = "output">24</output>
+	<div>
+	  <div id = "sleepSlider" class = "slider">
+          <label for = "fader"> Hours of Sleep </label><input type = "range" min = "0" max = "24" value = "0" id="fader" step = 1 oninput="outputUpdate(value)">
+          <output for = value id = "output">24</output>
+	  </div>
+	</br>
+	<p id = "sleep_record"></p>
+	<button type = "button" id = "submit" class = "tracking-buttons" onclick = "increaseSleep();">Submit</button>
+	</div>
     </div> 
-	<p>test2</p>
-    </div>
 
     <div id = "exercise_dropdown" class = "dropmenu">
 	<p>test3</p>
@@ -56,22 +60,18 @@
     <div id = "bars">
       <div id = "water_prog" class="prog">
       	<div id = "water_bar" class="bar"></div>
-	
       </div>
 
       <div id = "food_prog" class="prog">
       	<div id = "food_bar" class="bar"></div>
-	
       </div>
 
       <div id = "sleep_prog" class="prog">
       	<div id = "sleep_bar" class="bar"></div>
-	
       </div>
 
       <div id = "exercise_prog" class="prog">
       	<div id = "exercise_bar" class="bar"></div>
-	
       </div>
       
     </div>
