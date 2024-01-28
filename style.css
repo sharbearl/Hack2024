@@ -105,10 +105,15 @@ button.tracking-buttons:hover{
 }
 
 .icon {
-  position: fixed;
   height: 25px;
+
+}
+
+#icons {
+  position: fixed;
   bottom: 13px;
   left: 290px;
+  
 }
 
 body {
