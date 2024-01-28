@@ -40,7 +40,7 @@ button.tracking-buttons:hover{
   height: 200px;
   width: 30%;
   text-align: center;
-  background-color: white;
+  background-color: #d8ceed;
   border-radius:10px;
 }
 
@@ -74,6 +74,8 @@ button.tracking-buttons:hover{
   height: 200px;
   width: 100%;
   text-align: center;
+  background-color: #d8ceed;
+  border-radius:10px;
 }
 
 #sleep_dropdown {
@@ -82,6 +84,8 @@ button.tracking-buttons:hover{
   height: 200px;
   width: 50%;
   text-align: center;
+  background-color: #d8ceed;
+  border-radius:10px;
 }
 
 #exercise_dropdown {
@@ -90,6 +94,8 @@ button.tracking-buttons:hover{
   height: 200px;
   width: 100%;
   text-align: center;
+  background-color: #d8ceed;
+  border-radius:10px;
 }
 
 .sprites {
