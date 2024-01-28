@@ -158,7 +158,7 @@ function increaseSleep()
      let text_div = document.getElementById("sleep_record");
 
      text_div.innerHTML = "You slept enough today!";
-      document.getElementById("Hungry").style.display = "none";
+      document.getElementById("Sleepy").style.display = "none";
       document.getElementById("Hydrate").style.display = "block";
   }
   else
@@ -190,7 +190,7 @@ function toggleShowSleep()
   {
     if (zs < 9)
     {
-   	document.getElementById("Hungry").style.display = "block";
+   	document.getElementById("Sleepy").style.display = "block";
     }
     else
     {
@@ -214,7 +214,7 @@ function increaseBurn(amount)
      let text_div = document.getElementById("exercise_record");
 	console.log(text_div);
      text_div.innerHTML = "You burned 2000 calories today!";
-     document.getElementById("Hungry").style.display = "none";
+     document.getElementById("Working").style.display = "none";
      document.getElementById("Hydrate").style.display = "block";
   }
   let elem = document.getElementById("exercise_bar");
@@ -228,7 +228,7 @@ function increaseBurn(amount)
     text_div.innerHTML = "You burned 2000 calories today!";
     let elem = document.getElementById("workout_bar");
     elem.style.width = "100%";
-    document.getElementById("Hungry").style.display = "none";
+    document.getElementById("Working").style.display = "none";
     document.getElementById("Hydrate").style.display = "block";
  }
 }
@@ -251,7 +251,7 @@ function toggleShowExercise()
   {
     if (workout < 9)
     {
-   	document.getElementById("Hungry").style.display = "block";
+   	document.getElementById("Working").style.display = "block";
     }
     else
     {
