@@ -92,7 +92,9 @@ function increaseCalories(amount)
   calorie = calorie + amount; 
   if (calorie >= 1999)
   {
-     calorie = 1999;
+     calorie = 1999;    
+     let text_div = document.getElementById("food_record");
+     text_div.innerHTML = "You ate 2000 calories today!";
      document.getElementById("Hungry").style.display = "none";
      document.getElementById("Hydrate").style.display = "block";
   }
