@@ -201,6 +201,38 @@ function toggleShowSleep()
   }
 }
 
+function increaseBurn(amount)
+{
+ if (workout < 1999)
+ {
+  workout = workout + amount; 
+  //localStorage.setItem("cups", String(cups));
+  updateText("exercise_record");
+  if (workout >= 1999)
+  {
+     workout = 2000;    
+     let text_div = document.getElementById("exercise_record");
+	console.log(text_div);
+     text_div.innerHTML = "You burned 2000 calories today!";
+     document.getElementById("Hungry").style.display = "none";
+     document.getElementById("Hydrate").style.display = "block";
+  }
+  let elem = document.getElementById("exercise_bar");
+  elem.style.width = (100/2000)*workout + "%";
+ }
+ else if (workout = 1999)
+ {
+    workout = 1999;
+    //localStorage.setItem("cups", String(cups));
+    let text_div = document.getElementById("exercise_record");
+    text_div.innerHTML = "You burned 2000 calories today!";
+    let elem = document.getElementById("workout_bar");
+    elem.style.width = "100%";
+    document.getElementById("Hungry").style.display = "none";
+    document.getElementById("Hydrate").style.display = "block";
+ }
+}
+
 function toggleShowExercise()
 {
   //Need to add local storage
@@ -259,12 +291,15 @@ function updateText(id)
     }
     else if (id === "food_record")
     {
-      console.log(text_div.innerHtml);
-      console.log(text_div);
       text_div.innerHTML = calorie;
+    }
+    else if (id === "exercise_record")
+    {
+      text_div.innerHTML = workout;
     }
   }
 }
+
 function outputUpdate(num) {
     document.querySelector('#output').value = num;
     }
