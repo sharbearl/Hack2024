@@ -27,6 +27,10 @@ button.tracking-buttons:hover{
   padding:10px;
 }
 
+.dropmenu {
+  display: none;
+}
+
 #water_dropdown {
   display: none;
   margin: auto;
