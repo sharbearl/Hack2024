@@ -34,7 +34,6 @@ function increaseWater()
   updateText("water_record");
   let elem = document.getElementById("water_bar");
   elem.style.width = (100/11)*cups + "%";
-
   
  }
  else if (cups = 10)
@@ -56,7 +55,7 @@ function toggleShowWater()
   {
     cups = Number(localStorage.getItem("cups"));
     console.log(cups);
-    updateText("water_record");    
+    updateText("food_record");    
     let elem = document.getElementById("water_bar");
     elem.style.width = (100/11)*cups + "%";
   }
@@ -84,6 +83,36 @@ function toggleShowWater()
     water_div.style.display = "block";
     console.log("Showing");
   }
+}
+
+function increaseCalories(amount)
+{
+ if (calorie < 1999)
+ {
+  calorie = calorie + amount; 
+  if (calorie >= 1999)
+  {
+     calorie = 1999;
+     document.getElementById("Hungry").style.display = "none";
+     document.getElementById("Hydrate").style.display = "block";
+  }
+  //localStorage.setItem("cups", String(cups));
+  updateText("water_record");
+  let elem = document.getElementById("food_bar");
+  elem.style.width = (100/2000)*calorie + "%";
+  
+ }
+ else if (calorie = 1999)
+ {
+    calorie = 1999;
+    //localStorage.setItem("cups", String(cups));
+    let text_div = document.getElementById("food_record");
+    text_div.innerHTML = "You ate 2000 calories today!";
+    let elem = document.getElementById("calorie_bar");
+    elem.style.width = "100%";
+    document.getElementById("Hungry").style.display = "none";
+    document.getElementById("Hydrate").style.display = "block";
+ }
 }
 
 function toggleShowMeal()
