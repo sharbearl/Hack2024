@@ -40,6 +40,8 @@ button.tracking-buttons:hover{
   height: 200px;
   width: 30%;
   text-align: center;
+  background-color: white;
+  border-radius:10px;
 }
 
 #water_record {
@@ -177,7 +179,7 @@ body {
     left: 50%;
     transform: translate(-50%,20%);
     width: 500px;
-    height: 60px;
+    height: 30px;
     padding: 30px;
     padding-left: 40px;
     background: #fcfcfc;
