@@ -38,9 +38,8 @@ if __name__ == "__main__":
 	_left, mid, _right = st.columns(3)
 	img = "thirstyanteater.png"
 
-	
-	with mid:
-		st.image(img, width=300)		
+	mid = st.empty()
+	mid.image(img, width=300)		
 		
 	water_text = "Water"
 	water_bar = st.progress(0, text=water_text)
