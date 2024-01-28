@@ -16,6 +16,15 @@ button.tracking-buttons:hover{
 	to{background-color: gray;};
 }
 
+#background_image {
+  position: absolute;
+  left: -20%;
+  top: 20%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
 
 #Avatar {
    margin: auto;
