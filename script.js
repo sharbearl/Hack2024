@@ -334,6 +334,23 @@ function toggleShowExercise()
   }
 }
 
+function toggleAbout()
+{
+  let about_div = document.getElementById("about_dropdown");
+  let about_display = water_div.style.display;
+  clearmenu();
+  console.log(about_div.style.display);
+  if (about_display === "block")
+  {
+    document.getElementById("about").style.display = "block";
+    console.log("Hiding");
+  }
+  else
+  {  
+    water_div.style.display = "block";
+  }
+}
+
 function clearmenu()
 {
    const all = document.getElementsByClassName("dropmenu");
