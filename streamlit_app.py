@@ -34,8 +34,8 @@ def update_prog_calorie(calorie, calorie_bar, type, mid):
 		mid.empty()
 		mid.image(img, width=300)
 if __name__ == "__main__":
-	col1, col2, col3, col4 = st.columns(4)
 	_left, mid, _right = st.columns(3)
+	
 	img = "thirstyanteater.png"
 
 	mid = st.empty()
@@ -43,18 +43,6 @@ if __name__ == "__main__":
 		
 	water_text = "Water"
 	water_bar = st.progress(0, text=water_text)
-	
-	with col1.expander("Home"):
-	  st.write("this is a test")
-
-	with col2.expander("Water Log"):
-	  st.write("this is a test")
-	  
-	with col3.expander("Food Log"):
-	  st.write("this is a test")
-	  
-	with col4.expander("Exercise Log"):
-	  st.write("this is a test")
 	
 	# water_checkbox = col5.checkbox("Water check")
 	  
