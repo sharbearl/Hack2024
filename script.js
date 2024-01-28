@@ -29,8 +29,9 @@ function increaseWater()
  }
 }
 
-function toggleShow()
+function toggleShowWater()
 {
+  clearmenu();
   let water_div = document.getElementById("water_dropdown");
   console.log(water_div.style.display);
   if (water_div.style.display === "block")
@@ -43,6 +44,32 @@ function toggleShow()
     water_div.style.display = "block";
     console.log("Showing");
   }
+}
+
+function toggleShowMeal()
+{
+  clearmenu();
+  let water_div = document.getElementById("meal_dropdown");
+  console.log(water_div.style.display);
+  if (water_div.style.display === "block")
+  {
+    water_div.style.display = "none";
+    console.log("Hiding");
+  }
+  else
+  {
+    water_div.style.display = "block";
+    console.log("Showing");
+  }
+}
+
+function clearmenu()
+{
+   const all = document.getElementsByClassName("dropmenu");
+   for(let i = 0; i < all.length; i = i + 1)
+   {
+	all[i].style.display = "none";
+   }
 }
 
 function updateText()
