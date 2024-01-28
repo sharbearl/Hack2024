@@ -42,23 +42,31 @@ function increaseWater()
 
 function toggleShowWater()
 {
-
+  clearsprites();
   let water_div = document.getElementById("water_dropdown");
   let water_display = water_div.style.display;
   clearmenu();
   console.log(water_div.style.display);
   if (water_display === "block")
   {
+    document.getElementById("Default").style.display = "block";
     water_div.style.display = "none";
     console.log("Hiding");
   }
   else
-  {
+  {  
+    if (cups < 11)
+    {
+   	document.getElementById("Water").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("Hydrate").style.display = "block";
+    }
     water_div.style.display = "block";
     console.log("Showing");
   }
 }
-
 function toggleShowMeal()
 {
 
@@ -81,6 +89,15 @@ function toggleShowMeal()
 function clearmenu()
 {
    const all = document.getElementsByClassName("dropmenu");
+   for(let i = 0; i < all.length; i = i + 1)
+   {
+	all[i].style.display = "none";
+   }
+}
+
+function clearsprites()
+{
+   const all = document.getElementsByClassName("sprites");
    for(let i = 0; i < all.length; i = i + 1)
    {
 	all[i].style.display = "none";
