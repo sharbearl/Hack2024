@@ -1,6 +1,13 @@
 let cups = 0;
 let water_width = 0;
 
+if (localStorage.getItem("cups") != undefined)
+{
+    cups = Number(localStorage.getItem("cups"));
+    console.log(cups)
+    updateText()
+}
+
 function resetcups()
 {
   cups = 0;
@@ -45,6 +52,12 @@ function increaseWater()
 
 function toggleShowWater()
 {
+  if (localStorage.getItem("cups") != undefined)
+  {
+    cups = Number(localStorage.getItem("cups"));
+    console.log(cups)
+    updateText()
+  }
   clearsprites();
   let water_div = document.getElementById("water_dropdown");
   let water_display = water_div.style.display;
@@ -73,6 +86,7 @@ function toggleShowWater()
 
 function toggleShowMeal()
 {
+  //Need to add local storage
   clearsprites();
   let meal_div = document.getElementById("meal_dropdown");
   let meal_display = meal_div.style.display;
@@ -112,5 +126,8 @@ function clearsprites()
 function updateText(id)
 {
   let text_div = document.getElementById(id);
-  text_div.innerHTML = cups;
+  if (text_div != null)
+  {
+    text_div.innerHTML = cups;
+  }
 }
